@@ -142,13 +142,20 @@ def main():
                 frag = n[i1:i2].strip(" 　()（）・-－")
                 if len(frag) >= 3:          # 2文字は「イム」のような誤当たりが多い
                     removed.add(frag)
-    check("外された文字列が1つ以上ある（そもそも匿名化が働いている）", len(removed) >= 5)
+    # この検査は2つの場所で回る。手元（名前つきのファイル）と、公開リポジトリ（名前を外した版）。
+    # 「もとのファイルには名前が残っているはず」と決めつけると、公開リポジトリ側で必ず落ちる
+    # （実際に GitHub Actions で落ちた）。どちらでも成り立つ形は「**もう一度外しても変わらない**」。
+    check("配る版の名前は、もう一度外しても変わらない（外し切れている）",
+          all(m[n] == decks8.anon_one(m[n]) for n in names))
     check("配る版のデッキ名に、外されたはずの文字列が残っていない",
           not any(r in v for v in m.values() for r in removed))
-    check("手元のファイルには名前が残っている（出典をたどれる）",
-          any(r in n for n in names for r in removed))
     check("画面に出す短い名前にも残っていない",
           not any(r in decks8.short(m[n]) for n in names for r in removed))
+    if removed:
+        # 名前つきのファイルから回した時だけ見られること
+        check("手元のファイルには名前が残っている（出典をたどれる）",
+              any(r in n for n in names for r in removed))
+        check("外された文字列が1つ以上ある（そもそも匿名化が働いている）", len(removed) >= 5)
 
     here = os.path.dirname(os.path.abspath(__file__))
     zp = os.path.join(here, "web", "dmsrc.zip")
