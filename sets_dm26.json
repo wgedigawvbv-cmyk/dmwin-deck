@@ -1,0 +1,1950 @@
+{
+ "sets": [
+  {
+   "set": "DM26-RP1",
+   "title": "逆札篇 第1弾 逆転神VS切札竜",
+   "source": "https://dmwiki.net/DM26-RP1",
+   "total": 90,
+   "numbered_max": 77,
+   "cards": [
+    {
+     "no": "DM1/DM1",
+     "name": "切札竜 ボルメテウス・リバース・ドラゴン",
+     "rarity": "DR",
+     "implemented": true,
+     "key": "n_bolrev"
+    },
+    {
+     "no": "OR1/OR1",
+     "name": "逆転龍神ヘヴィ・ウィン・メタル",
+     "rarity": "OR",
+     "implemented": false
+    },
+    {
+     "no": "S1/S11",
+     "name": "叡智のW インビンシブル・ギャラクシー",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S2/S11",
+     "name": "世界のY チャクラ・デル・フィン",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "chakra"
+    },
+    {
+     "no": "S3/S11",
+     "name": "偉形のX エクストリーム・キリコ",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S4/S11",
+     "name": "旋略のS アドミラル・アレグル",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "e_allegre"
+    },
+    {
+     "no": "S5/S11",
+     "name": "冥幽のU ブライゼジェネレイド",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S6/S11",
+     "name": "蝕眼のV ヴェノム・ランブル",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "venom"
+    },
+    {
+     "no": "S7/S11",
+     "name": "逆転の火焔ボルシャック・メビウス",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "e_bolmebius"
+    },
+    {
+     "no": "S8/S11",
+     "name": "暴龍のT ミリオンベジータ",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "n_vegeta"
+    },
+    {
+     "no": "S9/S11",
+     "name": "轟腕のR ダグラジャパニカン",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "dagra"
+    },
+    {
+     "no": "S10/S11",
+     "name": "森仙のJ ロマネスク",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "e_romanesque"
+    },
+    {
+     "no": "S11/S11",
+     "name": "斬隠将撃龍ニバイケン",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "e_nibaiken"
+    },
+    {
+     "no": "1/77",
+     "name": "神羅の銀月 ザ・ラムーン",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "2/77",
+     "name": "神帝の黒月 ジ・オリジナル",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "3/77",
+     "name": "傀儡秘宝ベンゾルス",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "4/77",
+     "name": "爆焔ジェット・メモッタ",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "5/77",
+     "name": "二重のA ボルバルザーク・紫電",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "6/77",
+     "name": "圧倒するレオパルズ・ホーン",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "7/77",
+     "name": "邪眼鎧悪ロマノフⅣ世",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "8/77",
+     "name": "聖竜鎧 シデンズ・ソウル",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "9/77",
+     "name": "空神のD ドッコイ",
+     "rarity": "VR",
+     "implemented": true,
+     "key": "dokkoi"
+    },
+    {
+     "no": "10/77",
+     "name": "魅神のG パロロ",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "11/77",
+     "name": "宝魂剣と獄門盾の決断",
+     "rarity": "VR",
+     "implemented": true,
+     "key": "e_houkonken"
+    },
+    {
+     "no": "12/77",
+     "name": "霊騎ガルテオ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "13/77",
+     "name": "戦技の炎 ボルメテウス・ソル",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "14/77",
+     "name": "改竄の炎 ボルメテウス・ハック",
+     "rarity": "R",
+     "implemented": true,
+     "key": "e_bolhack"
+    },
+    {
+     "no": "15/77",
+     "name": "電磁麗姫ガルリー",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "16/77",
+     "name": "ゴッダマ・ルピア",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "17/77",
+     "name": "インフェルノ・ドラグーン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "18/77",
+     "name": "メタルカオスクラッパー・ドラゴン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "19/77",
+     "name": "闘龍騎アポロヌス・ドラグーン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "20/77",
+     "name": "呪遁の化身",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "21/77",
+     "name": "武神のF オルメガス",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "22/77",
+     "name": "ジェネラル・ガルガタン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "23/77",
+     "name": "創造の天空城 ホワイト・ネオウェーブ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "24/77",
+     "name": "魂が休む庭園 グリーン・グランドクロス",
+     "rarity": "R",
+     "implemented": true,
+     "key": "gcross"
+    },
+    {
+     "no": "25/77",
+     "name": "深き知識の神殿 ブルー・ツナミ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "26/77",
+     "name": "覇王の前線基地 ブラック・エクスプロード",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "27/77",
+     "name": "燃え尽きぬ館 レッド・プロミネンス",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "28/77",
+     "name": "超電磁工兵ガル・キーン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "29/77",
+     "name": "雷遁の開眼者ウッズ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "30/77",
+     "name": "王神のO プロディジー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "31/77",
+     "name": "我竜塔第六層 シルヴァー・グローリー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "32/77",
+     "name": "フェイト・ガルペンター",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "33/77",
+     "name": "スイトン・クロウラー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "34/77",
+     "name": "源神のH エレクトロン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "35/77",
+     "name": "究極我竜塔 ティーツー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "36/77",
+     "name": "黒神龍ネオ・ドボルザーク",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "37/77",
+     "name": "死神の影遁デスプルーフ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "38/77",
+     "name": "撃滅神オブリ＆レイト",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "39/77",
+     "name": "我竜塔最高層 ローズ・キャッスル",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "40/77",
+     "name": "マッハ・ガルピア",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "41/77",
+     "name": "破壊の神遁バジル",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "42/77",
+     "name": "朱神のC ガリョウ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "43/77",
+     "name": "我竜塔第八層 バルザーク",
+     "rarity": "U",
+     "implemented": true,
+     "key": "e_barzark"
+    },
+    {
+     "no": "44/77",
+     "name": "神嵐の超人",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "45/77",
+     "name": "護神のP エメラルド・ファラオ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "46/77",
+     "name": "ガルド・ライフ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "47/77",
+     "name": "我竜塔第七層 ハッスル・キャッスル",
+     "rarity": "U",
+     "implemented": true,
+     "key": "hustle"
+    },
+    {
+     "no": "48/77",
+     "name": "英王のM スターマン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "49/77",
+     "name": "獣王のB ペガサス",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "50/77",
+     "name": "蛇王のL ナーガ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "51/77",
+     "name": "死王のK デス・フェニックス",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "52/77",
+     "name": "魂王のE ソウル・フェニックス",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "53/77",
+     "name": "幸せの精霊ミルザム・キッド",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "54/77",
+     "name": "一神のI ガナストラ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "55/77",
+     "name": "プラスワン・スパーク",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "56/77",
+     "name": "アドベント・チャージャー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "57/77",
+     "name": "我竜塔第一層 セイント・キャッスル",
+     "rarity": "C",
+     "implemented": true,
+     "key": "saint"
+    },
+    {
+     "no": "58/77",
+     "name": "非神のN キキ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "59/77",
+     "name": "漂流大陸の進撃",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "60/77",
+     "name": "ガルド・ブレイン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "61/77",
+     "name": "プラスワン・ゲート",
+     "rarity": "C",
+     "implemented": true,
+     "key": "n_plusone"
+    },
+    {
+     "no": "62/77",
+     "name": "我竜塔第五層 海底鬼面城",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "63/77",
+     "name": "腐食の炎 ボルメテウス・ザンジ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "64/77",
+     "name": "解体人形ジェガル",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "65/77",
+     "name": "プラスワン・ハンド",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "66/77",
+     "name": "切り札の時!!",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "67/77",
+     "name": "我竜塔第四層 ポチョムキン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "68/77",
+     "name": "襲撃者ガルゼドライブ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "69/77",
+     "name": "コットピ・ルピア",
+     "rarity": "C",
+     "implemented": true,
+     "key": "n_kottopi"
+    },
+    {
+     "no": "70/77",
+     "name": "プラスワン・フレーム",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "71/77",
+     "name": "逆転の時!!",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "72/77",
+     "name": "我竜塔第三層 超鯱城",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "73/77",
+     "name": "謎神のQ ギリメノアイル",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "74/77",
+     "name": "ノーガルディ・ネギオ＆ガルダンディ・ナスオ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "75/77",
+     "name": "インビンシブル・タワー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "76/77",
+     "name": "プラスワン・トラップ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "77/77",
+     "name": "我竜塔第二層 ダルマンディ",
+     "rarity": "C",
+     "implemented": false
+    }
+   ]
+  },
+  {
+   "set": "DM26-RP2",
+   "title": "逆札篇 第2弾 燃えろ禁断！逆転のドギラゴン革命‼︎",
+   "source": "https://dmwiki.net/DM26-RP2",
+   "total": 90,
+   "numbered_max": 77,
+   "cards": [
+    {
+     "no": "DM1/DM1",
+     "name": "烈しき切札 ドギラゴン逆",
+     "rarity": "DR",
+     "implemented": true,
+     "key": "dogigyaku"
+    },
+    {
+     "no": "OR1/OR1",
+     "name": "燃える禁断 ドルマゲドンW",
+     "rarity": "OR",
+     "implemented": false
+    },
+    {
+     "no": "S1/S11",
+     "name": "「業流」の頂 ゾロ・ア・スタート",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "zoro"
+    },
+    {
+     "no": "S2/S11",
+     "name": "天V王 エバーラスト",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "everlast"
+    },
+    {
+     "no": "S3/S11",
+     "name": "龍V王 Q.E.D.",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S4/S11",
+     "name": "魔V王 デスシラズ",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S5/S11",
+     "name": "熱血V龍 ガイギンガ",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S6/S11",
+     "name": "永遠の絆",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S7/S11",
+     "name": "時の団長 ミラダンテ槍",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "n_yari"
+    },
+    {
+     "no": "S8/S11",
+     "name": "百族の団長 プチョヘンザ斧",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S9/S11",
+     "name": "完璧団長 オーパーツ銃",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "ops"
+    },
+    {
+     "no": "S10/S11",
+     "name": "傷だらけの革命 スカーレッドゾーン",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "scarlet"
+    },
+    {
+     "no": "S11/S11",
+     "name": "V頂神話 カツムゲン",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "1/77",
+     "name": "極まる九極 Q.⁹",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "2/77",
+     "name": "神極の絆",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "3/77",
+     "name": "叛逆の絆",
+     "rarity": "VR",
+     "implemented": true,
+     "key": "hangyaku"
+    },
+    {
+     "no": "4/77",
+     "name": "熱血の名 修羅丸",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "5/77",
+     "name": "零黒の絆",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "6/77",
+     "name": "不明な不透明 メモッタ",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "7/77",
+     "name": "勇愛の絆",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "8/77",
+     "name": "ガチャンコ ガチロボ弐号機",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "9/77",
+     "name": "勝利宣言 鬼丸「V」",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "10/77",
+     "name": "鎧亜目邪王類 デス＝ヴェルムート",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "11/77",
+     "name": "武将利と威嚇命の決断",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "12/77",
+     "name": "連戦の精霊龍 デルザルバーラ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "13/77",
+     "name": "ポプポプ守るナウ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "14/77",
+     "name": "スラスラ吸い込むナウ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "15/77",
+     "name": "Dの機動 ヴァイス・ヴァーチュー",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "16/77",
+     "name": "熱血の名 カチスギル・スキル",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "17/77",
+     "name": "ごくごく掘るナウ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "18/77",
+     "name": "流星の使者 ウコン＆サコン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "19/77",
+     "name": "ドファドファ叩くナウ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "20/77",
+     "name": "虹暴の面 ガチ＝ザ＝デッドマン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "21/77",
+     "name": "サクサク打つべしナウ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "22/77",
+     "name": "熱血美刃 ミケランジェロ",
+     "rarity": "R",
+     "implemented": true,
+     "key": "n_michel"
+    },
+    {
+     "no": "23/77",
+     "name": "漢の2号 ボスカツ逆",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "24/77",
+     "name": "絶超熱血 ロビンフッド",
+     "rarity": "R",
+     "implemented": true,
+     "key": "robin"
+    },
+    {
+     "no": "25/77",
+     "name": "革命の轟速 レッドゾーンW",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "26/77",
+     "name": "V闘将軍 カツキング",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "27/77",
+     "name": "獣音類武士目 グローバル・ステージ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "28/77",
+     "name": "護英雄 タップ・ド・レイユ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "29/77",
+     "name": "鎧亜寄生パラス・キューピッド",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "30/77",
+     "name": "光器セイント・ガチ・マリア",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "31/77",
+     "name": "極俺秘伝ライオネル・ガード",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "32/77",
+     "name": "理英雄 コギトL",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "33/77",
+     "name": "救済のラクシャ ミルク",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "34/77",
+     "name": "鎧亜寄生パラス・ボクサー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "35/77",
+     "name": "極智秘伝ローゼス・チューン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "36/77",
+     "name": "熱血の星夜 アバター・イン・ザ・ラブ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "37/77",
+     "name": "凶英雄 アカトクロ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "38/77",
+     "name": "鎧亜寄生パラス・マジシャン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "39/77",
+     "name": "極呪秘伝サスペンス・マインド",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "40/77",
+     "name": "撃英雄 ガイグンシン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "41/77",
+     "name": "鎧亜寄生パラス・ミュージック",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "42/77",
+     "name": "連射のラクシャ ユキメ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "43/77",
+     "name": "極命秘伝グレート・クラッシュ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "44/77",
+     "name": "牙英雄 アワザ＝カーン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "45/77",
+     "name": "鎧亜寄生パラス・ピエロ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "46/77",
+     "name": "雪精 エリカッチュ。",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "47/77",
+     "name": "極勝秘伝カイザー・ビクトリー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "48/77",
+     "name": "熱血刃 ニケ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "49/77",
+     "name": "刀の3号 カツえもん逆",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "50/77",
+     "name": "超熱血 ロビー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "51/77",
+     "name": "D2-W革命のボルトロン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "52/77",
+     "name": "V闘龍 カツドン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "53/77",
+     "name": "タイム槍 ドレミ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "54/77",
+     "name": "熱血の羅刹 メフィス・トリック",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "55/77",
+     "name": "神判のラクシャ コットン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "56/77",
+     "name": "熱血の親衛隊ラプソディ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "57/77",
+     "name": "ホーリー・出す・バナナ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "58/77",
+     "name": "宇宙 バリアスキー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "59/77",
+     "name": "【問銃】テック",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "60/77",
+     "name": "熱血の親衛隊ペッパー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "61/77",
+     "name": "アクア秘務官 ロバート・フック",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "62/77",
+     "name": "天災のSSS級計画",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "63/77",
+     "name": "ZEROの革命 ブラックアウト",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "64/77",
+     "name": "革命α ドルーター",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "65/77",
+     "name": "熱血の親衛隊ファンク",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "66/77",
+     "name": "禁術のラクシャ カレイル",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "67/77",
+     "name": "狼牙獣鎌拳",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "68/77",
+     "name": "超革命 マッハ55",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "69/77",
+     "name": "雪精 マリニャン。",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "70/77",
+     "name": "機神勇者ビクトリーダッシュ・バスター",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "71/77",
+     "name": "熱血の親衛隊クラップ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "72/77",
+     "name": "FORBIDDEN RAGE ～禁断の怒り～",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "73/77",
+     "name": "雪精 サエポヨ。",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "74/77",
+     "name": "風の1号 ハムカツマン逆",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "75/77",
+     "name": "清浄のラクシャ インカ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "76/77",
+     "name": "熱血の親衛隊シウバ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "77/77",
+     "name": "完全熱血革命",
+     "rarity": "C",
+     "implemented": false
+    }
+   ]
+  },
+  {
+   "set": "DM26-RP3",
+   "title": "逆札篇 第3弾 勝敵！逆転おこせ鬼の∞ディスペクター!!",
+   "source": "https://dmwiki.net/DM26-RP3",
+   "total": 90,
+   "numbered_max": 77,
+   "cards": [
+    {
+     "no": "DM1/DM1",
+     "name": "勝敵逆夢王 モウジャキンガ",
+     "rarity": "DR",
+     "implemented": true,
+     "key": "n_mouja"
+    },
+    {
+     "no": "OR1/OR1",
+     "name": "Σ龍",
+     "rarity": "OR",
+     "implemented": false
+    },
+    {
+     "no": "S1/S11",
+     "name": "SUPREME-GUN・ザ・ジョニー",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S2/S11",
+     "name": "ジョット・首魁・ジョラゴン",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S3/S11",
+     "name": "Dr.富士山ッピング",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S4/S11",
+     "name": "アイシャセー神",
+     "rarity": "SR",
+     "implemented": true,
+     "key": "n_aisha"
+    },
+    {
+     "no": "S5/S11",
+     "name": "“↑↑”ブランド",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S6/S11",
+     "name": "闘帝合体 サンダイテイオー",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S7/S11",
+     "name": "「正義と正義と正義と正義」",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S8/S11",
+     "name": "キング∞エンペラー",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S9/S11",
+     "name": "爆龍羅王 ゴリナボルト",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S10/S11",
+     "name": "祝え！冥帝王 ダイジュ・ディダノス",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "S11/S11",
+     "name": "天地命動 バラギアラ／輪廻虹災",
+     "rarity": "SR",
+     "implemented": false
+    },
+    {
+     "no": "1/77",
+     "name": "ヒトリダチ ケントナーク",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "2/77",
+     "name": "七王を統べる者 魔王ザダン",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "3/77",
+     "name": "ドラマチック息子",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "4/77",
+     "name": "ミノガミ＆オウ禍武斗／T.2.D.",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "5/77",
+     "name": "蒸光逆夢 リリオクパング",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "6/77",
+     "name": "煌風逆夢 サヴェスヴァーク",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "7/77",
+     "name": "歓扉逆夢 バイギャラドスツ",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "8/77",
+     "name": "勝次逆夢 スコラッシュ“覇嵐”",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "9/77",
+     "name": "羅明逆夢 アシュノムカメイ",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "10/77",
+     "name": "鉄禍逆夢 アイングダン・オウマ武斗ン",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "11/77",
+     "name": "黎悪銃と邪煉哀の決断",
+     "rarity": "VR",
+     "implemented": false
+    },
+    {
+     "no": "12/77",
+     "name": "激アツポンの助",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "13/77",
+     "name": "にやにYAH",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "14/77",
+     "name": "ノヴァルチャ・ハレイズ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "15/77",
+     "name": "裏魔導書グリモア-I章",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "16/77",
+     "name": "ゲラッチョ重役／「ミーのチョーおすすめゲラ！」",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "17/77",
+     "name": "冥王の顎",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "18/77",
+     "name": "キング・ザ・ベスト",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "19/77",
+     "name": "ドドンガ轟キャイエス",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "20/77",
+     "name": "大地 コンダマ-2",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "21/77",
+     "name": "コクーン・ツェッペリン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "22/77",
+     "name": "輝晶 エヴァ-3",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "23/77",
+     "name": "冥運逆夢 ハミデスナスカ",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "24/77",
+     "name": "雷星逆夢 ヴァリ-我-ラウザス",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "25/77",
+     "name": "魔具 ヴァイポイズ-4",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "26/77",
+     "name": "昆怪逆夢 アンダステリオン",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "27/77",
+     "name": "罰空逆夢 ブラゴチャーンド",
+     "rarity": "R",
+     "implemented": false
+    },
+    {
+     "no": "28/77",
+     "name": "銃初逆夢 ザ・ウィニー／ジョリー・ザ・スパーク",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "29/77",
+     "name": "輝晶 シンプ-2",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "30/77",
+     "name": "ヒトリダチ キャンベロ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "31/77",
+     "name": "輝晶 マルハヴ-2",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "32/77",
+     "name": "銃宮逆夢 ザ・ネオニー／ジョリー・ザ・ブレイン",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "33/77",
+     "name": "スイドー・ド・デショー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "34/77",
+     "name": "The 淡口ラー漢 極",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "35/77",
+     "name": "アアルカイトの電影",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "36/77",
+     "name": "銃毒逆夢 ザ・ゲオニー／ジョリー・ザ・ハンド",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "37/77",
+     "name": "ワーク騎士",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "38/77",
+     "name": "×マドギワ親父",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "39/77",
+     "name": "闇影 ヘモグロ-2",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "40/77",
+     "name": "ア・ストラ・ゼーレの電影",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "41/77",
+     "name": "ケツカッちん",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "42/77",
+     "name": "銃車逆夢 ザ・マグニー／ジョリー・ザ・スクラッパー",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "43/77",
+     "name": "爆衆 ランブル-2",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "44/77",
+     "name": "爆衆 マキシ-2",
+     "rarity": "U",
+     "implemented": true,
+     "key": "n_maxi"
+    },
+    {
+     "no": "45/77",
+     "name": "メモッタルド・デカスギオ／メモメモ・ジョーカーズ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "46/77",
+     "name": "銃蝸逆夢 ザ・デンニー／ジョリー・ザ・トラップ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "47/77",
+     "name": "Q字工事",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "48/77",
+     "name": "凄虫逆夢 ボイノ・ブサント",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "49/77",
+     "name": "翔天 スケプ-3",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "50/77",
+     "name": "妖精 キユリ-2",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "51/77",
+     "name": "邪鬼 コオニ-4",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "52/77",
+     "name": "ヒミッツキッチ・グローブ",
+     "rarity": "U",
+     "implemented": false
+    },
+    {
+     "no": "53/77",
+     "name": "祝の瞬き 流終",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "54/77",
+     "name": "真・メシアカリバー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "55/77",
+     "name": "ヒトリダチ モンキッド",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "56/77",
+     "name": "龍装者 クシュトル",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "57/77",
+     "name": "クリスタの輝影／シディアン・ニーラム",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "58/77",
+     "name": "龍装者 ドヘブン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "59/77",
+     "name": "覇王になる男 ググッピー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "60/77",
+     "name": "ビーチボーイズ・II・メン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "61/77",
+     "name": "ザエッサの海影／六奇怪の無 〜氾濫する覇王〜",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "62/77",
+     "name": "バイナラベーター",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "63/77",
+     "name": "龍装医 スティーツ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "64/77",
+     "name": "ツーキンカイソッQ",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "65/77",
+     "name": "ツミタテンカーネン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "66/77",
+     "name": "バギンの闇影／卑劣な裏切り",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "67/77",
+     "name": "SMANAGER",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "68/77",
+     "name": "緑王双命三速斧",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "69/77",
+     "name": "龍装者 プロチュリス／「主役を目指すッス！」",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "70/77",
+     "name": "どうだいジンセー",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "71/77",
+     "name": "チュチュリスの爆影／“無我怒”駆乱襲",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "72/77",
+     "name": "龍装車 ギギャイア",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "73/77",
+     "name": "大地 ワタン-2",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "74/77",
+     "name": "ホッタレマン",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "75/77",
+     "name": "ルグンドドの大影／マメ・ウィズ・ア・ミッション",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "76/77",
+     "name": "邪桃臨界怒刀脚",
+     "rarity": "C",
+     "implemented": false
+    },
+    {
+     "no": "77/77",
+     "name": "光る！流れる!!ベンザマン!!!",
+     "rarity": "C",
+     "implemented": false
+    }
+   ]
+  },
+  {
+   "set": "DM26-RP4",
+   "title": "逆札篇 第4弾（タイトル未確認）",
+   "source": "https://dmwiki.net/DM26-RP4",
+   "total": 0,
+   "numbered_max": 0,
+   "cards": [],
+   "note": "dmwiki に DM26-RP4 のページがまだ存在しない（逆札篇のシリーズ一覧では赤リンク）。他のサイトにも収録カードリストは見つからなかったため、カード名は一切取得できていない。"
+  }
+ ],
+ "missing": [
+  "逆転龍神ヘヴィ・ウィン・メタル",
+  "叡智のW インビンシブル・ギャラクシー",
+  "偉形のX エクストリーム・キリコ",
+  "冥幽のU ブライゼジェネレイド",
+  "神羅の銀月 ザ・ラムーン",
+  "神帝の黒月 ジ・オリジナル",
+  "傀儡秘宝ベンゾルス",
+  "爆焔ジェット・メモッタ",
+  "二重のA ボルバルザーク・紫電",
+  "圧倒するレオパルズ・ホーン",
+  "邪眼鎧悪ロマノフⅣ世",
+  "聖竜鎧 シデンズ・ソウル",
+  "魅神のG パロロ",
+  "霊騎ガルテオ",
+  "戦技の炎 ボルメテウス・ソル",
+  "電磁麗姫ガルリー",
+  "ゴッダマ・ルピア",
+  "インフェルノ・ドラグーン",
+  "メタルカオスクラッパー・ドラゴン",
+  "闘龍騎アポロヌス・ドラグーン",
+  "呪遁の化身",
+  "武神のF オルメガス",
+  "ジェネラル・ガルガタン",
+  "創造の天空城 ホワイト・ネオウェーブ",
+  "深き知識の神殿 ブルー・ツナミ",
+  "覇王の前線基地 ブラック・エクスプロード",
+  "燃え尽きぬ館 レッド・プロミネンス",
+  "超電磁工兵ガル・キーン",
+  "雷遁の開眼者ウッズ",
+  "王神のO プロディジー",
+  "我竜塔第六層 シルヴァー・グローリー",
+  "フェイト・ガルペンター",
+  "スイトン・クロウラー",
+  "源神のH エレクトロン",
+  "究極我竜塔 ティーツー",
+  "黒神龍ネオ・ドボルザーク",
+  "死神の影遁デスプルーフ",
+  "撃滅神オブリ＆レイト",
+  "我竜塔最高層 ローズ・キャッスル",
+  "マッハ・ガルピア",
+  "破壊の神遁バジル",
+  "朱神のC ガリョウ",
+  "神嵐の超人",
+  "護神のP エメラルド・ファラオ",
+  "ガルド・ライフ",
+  "英王のM スターマン",
+  "獣王のB ペガサス",
+  "蛇王のL ナーガ",
+  "死王のK デス・フェニックス",
+  "魂王のE ソウル・フェニックス",
+  "幸せの精霊ミルザム・キッド",
+  "一神のI ガナストラ",
+  "プラスワン・スパーク",
+  "アドベント・チャージャー",
+  "非神のN キキ",
+  "漂流大陸の進撃",
+  "ガルド・ブレイン",
+  "我竜塔第五層 海底鬼面城",
+  "腐食の炎 ボルメテウス・ザンジ",
+  "解体人形ジェガル",
+  "プラスワン・ハンド",
+  "切り札の時!!",
+  "我竜塔第四層 ポチョムキン",
+  "襲撃者ガルゼドライブ",
+  "プラスワン・フレーム",
+  "逆転の時!!",
+  "我竜塔第三層 超鯱城",
+  "謎神のQ ギリメノアイル",
+  "ノーガルディ・ネギオ＆ガルダンディ・ナスオ",
+  "インビンシブル・タワー",
+  "プラスワン・トラップ",
+  "我竜塔第二層 ダルマンディ",
+  "燃える禁断 ドルマゲドンW",
+  "龍V王 Q.E.D.",
+  "魔V王 デスシラズ",
+  "熱血V龍 ガイギンガ",
+  "永遠の絆",
+  "百族の団長 プチョヘンザ斧",
+  "V頂神話 カツムゲン",
+  "極まる九極 Q.⁹",
+  "神極の絆",
+  "熱血の名 修羅丸",
+  "零黒の絆",
+  "不明な不透明 メモッタ",
+  "勇愛の絆",
+  "ガチャンコ ガチロボ弐号機",
+  "勝利宣言 鬼丸「V」",
+  "鎧亜目邪王類 デス＝ヴェルムート",
+  "武将利と威嚇命の決断",
+  "連戦の精霊龍 デルザルバーラ",
+  "ポプポプ守るナウ",
+  "スラスラ吸い込むナウ",
+  "Dの機動 ヴァイス・ヴァーチュー",
+  "熱血の名 カチスギル・スキル",
+  "ごくごく掘るナウ",
+  "流星の使者 ウコン＆サコン",
+  "ドファドファ叩くナウ",
+  "虹暴の面 ガチ＝ザ＝デッドマン",
+  "サクサク打つべしナウ",
+  "漢の2号 ボスカツ逆",
+  "革命の轟速 レッドゾーンW",
+  "V闘将軍 カツキング",
+  "獣音類武士目 グローバル・ステージ",
+  "護英雄 タップ・ド・レイユ",
+  "鎧亜寄生パラス・キューピッド",
+  "光器セイント・ガチ・マリア",
+  "極俺秘伝ライオネル・ガード",
+  "理英雄 コギトL",
+  "救済のラクシャ ミルク",
+  "鎧亜寄生パラス・ボクサー",
+  "極智秘伝ローゼス・チューン",
+  "熱血の星夜 アバター・イン・ザ・ラブ",
+  "凶英雄 アカトクロ",
+  "鎧亜寄生パラス・マジシャン",
+  "極呪秘伝サスペンス・マインド",
+  "撃英雄 ガイグンシン",
+  "鎧亜寄生パラス・ミュージック",
+  "連射のラクシャ ユキメ",
+  "極命秘伝グレート・クラッシュ",
+  "牙英雄 アワザ＝カーン",
+  "鎧亜寄生パラス・ピエロ",
+  "雪精 エリカッチュ。",
+  "極勝秘伝カイザー・ビクトリー",
+  "熱血刃 ニケ",
+  "刀の3号 カツえもん逆",
+  "超熱血 ロビー",
+  "D2-W革命のボルトロン",
+  "V闘龍 カツドン",
+  "タイム槍 ドレミ",
+  "熱血の羅刹 メフィス・トリック",
+  "神判のラクシャ コットン",
+  "熱血の親衛隊ラプソディ",
+  "ホーリー・出す・バナナ",
+  "宇宙 バリアスキー",
+  "【問銃】テック",
+  "熱血の親衛隊ペッパー",
+  "アクア秘務官 ロバート・フック",
+  "天災のSSS級計画",
+  "ZEROの革命 ブラックアウト",
+  "革命α ドルーター",
+  "熱血の親衛隊ファンク",
+  "禁術のラクシャ カレイル",
+  "狼牙獣鎌拳",
+  "超革命 マッハ55",
+  "雪精 マリニャン。",
+  "機神勇者ビクトリーダッシュ・バスター",
+  "熱血の親衛隊クラップ",
+  "FORBIDDEN RAGE ～禁断の怒り～",
+  "雪精 サエポヨ。",
+  "風の1号 ハムカツマン逆",
+  "清浄のラクシャ インカ",
+  "熱血の親衛隊シウバ",
+  "完全熱血革命",
+  "Σ龍",
+  "SUPREME-GUN・ザ・ジョニー",
+  "ジョット・首魁・ジョラゴン",
+  "Dr.富士山ッピング",
+  "“↑↑”ブランド",
+  "闘帝合体 サンダイテイオー",
+  "「正義と正義と正義と正義」",
+  "キング∞エンペラー",
+  "爆龍羅王 ゴリナボルト",
+  "祝え！冥帝王 ダイジュ・ディダノス",
+  "天地命動 バラギアラ／輪廻虹災",
+  "ヒトリダチ ケントナーク",
+  "七王を統べる者 魔王ザダン",
+  "ドラマチック息子",
+  "ミノガミ＆オウ禍武斗／T.2.D.",
+  "蒸光逆夢 リリオクパング",
+  "煌風逆夢 サヴェスヴァーク",
+  "歓扉逆夢 バイギャラドスツ",
+  "勝次逆夢 スコラッシュ“覇嵐”",
+  "羅明逆夢 アシュノムカメイ",
+  "鉄禍逆夢 アイングダン・オウマ武斗ン",
+  "黎悪銃と邪煉哀の決断",
+  "激アツポンの助",
+  "にやにYAH",
+  "ノヴァルチャ・ハレイズ",
+  "裏魔導書グリモア-I章",
+  "ゲラッチョ重役／「ミーのチョーおすすめゲラ！」",
+  "冥王の顎",
+  "キング・ザ・ベスト",
+  "ドドンガ轟キャイエス",
+  "大地 コンダマ-2",
+  "コクーン・ツェッペリン",
+  "輝晶 エヴァ-3",
+  "冥運逆夢 ハミデスナスカ",
+  "雷星逆夢 ヴァリ-我-ラウザス",
+  "魔具 ヴァイポイズ-4",
+  "昆怪逆夢 アンダステリオン",
+  "罰空逆夢 ブラゴチャーンド",
+  "銃初逆夢 ザ・ウィニー／ジョリー・ザ・スパーク",
+  "輝晶 シンプ-2",
+  "ヒトリダチ キャンベロ",
+  "輝晶 マルハヴ-2",
+  "銃宮逆夢 ザ・ネオニー／ジョリー・ザ・ブレイン",
+  "スイドー・ド・デショー",
+  "The 淡口ラー漢 極",
+  "アアルカイトの電影",
+  "銃毒逆夢 ザ・ゲオニー／ジョリー・ザ・ハンド",
+  "ワーク騎士",
+  "×マドギワ親父",
+  "闇影 ヘモグロ-2",
+  "ア・ストラ・ゼーレの電影",
+  "ケツカッちん",
+  "銃車逆夢 ザ・マグニー／ジョリー・ザ・スクラッパー",
+  "爆衆 ランブル-2",
+  "メモッタルド・デカスギオ／メモメモ・ジョーカーズ",
+  "銃蝸逆夢 ザ・デンニー／ジョリー・ザ・トラップ",
+  "Q字工事",
+  "凄虫逆夢 ボイノ・ブサント",
+  "翔天 スケプ-3",
+  "妖精 キユリ-2",
+  "邪鬼 コオニ-4",
+  "ヒミッツキッチ・グローブ",
+  "祝の瞬き 流終",
+  "真・メシアカリバー",
+  "ヒトリダチ モンキッド",
+  "龍装者 クシュトル",
+  "クリスタの輝影／シディアン・ニーラム",
+  "龍装者 ドヘブン",
+  "覇王になる男 ググッピー",
+  "ビーチボーイズ・II・メン",
+  "ザエッサの海影／六奇怪の無 〜氾濫する覇王〜",
+  "バイナラベーター",
+  "龍装医 スティーツ",
+  "ツーキンカイソッQ",
+  "ツミタテンカーネン",
+  "バギンの闇影／卑劣な裏切り",
+  "SMANAGER",
+  "緑王双命三速斧",
+  "龍装者 プロチュリス／「主役を目指すッス！」",
+  "どうだいジンセー",
+  "チュチュリスの爆影／“無我怒”駆乱襲",
+  "龍装車 ギギャイア",
+  "大地 ワタン-2",
+  "ホッタレマン",
+  "ルグンドドの大影／マメ・ウィズ・ア・ミッション",
+  "邪桃臨界怒刀脚",
+  "光る！流れる!!ベンザマン!!!"
+ ],
+ "counts": {
+  "DM26-RP1": {
+   "total": 90,
+   "missing": 72
+  },
+  "DM26-RP2": {
+   "total": 90,
+   "missing": 81
+  },
+  "DM26-RP3": {
+   "total": 90,
+   "missing": 87
+  },
+  "DM26-RP4": {
+   "total": 0,
+   "missing": 0
+  }
+ }
+}

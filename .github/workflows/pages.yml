@@ -1,0 +1,88 @@
+# スマホからでも更新できるようにするための仕掛け。
+#
+#   main に push される（＝GitHub の画面でカードのファイルを1行直してコミットする）たびに、
+#   GitHub 側の機械が webbuild.py を走らせて web/ を作り、そのまま Pages に出す。
+#   できあがった 13MB はリポジトリに入らない（毎回その場で作られて、そのまま配られる）。
+#
+#   Actions タブの「Run workflow」からは、何も変えずに作り直すこともできる。
+#
+# 使う前に1度だけ：リポジトリの Settings → Pages → Source を
+#   「GitHub Actions」にすること（「Deploy from a branch」ではない）。
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # Actions タブから手で動かせるようにする（スマホ用）
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 続けて push した時に、古いほうを待たせる（並べて走らせると取り違える）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ソースを取る
+        uses: actions/checkout@v4
+
+      - name: Python を用意する
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Node を用意する（Pyodide を取るため）
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 中身がそろっているか確かめる
+        run: |
+          python -c "import envcards, envreg; from cards3 import POOL; print('カードプール', len(POOL), '枚／新カード', len(envreg.STATUS), '件')"
+
+      - name: Pyodide を取る（12MB。リポジトリには入れない）
+        run: npm install pyodide@0.29.5 --no-save
+
+      - name: web を作る
+        run: python webbuild.py --pyodide node_modules/pyodide
+
+      # 検査は web を作った後に回す。test_web.py は、できあがった web/ を見る
+      # 3件を web/ が無いと飛ばしてしまう（作る前に回すと 29件のうち 26件しか見ない）。
+      - name: 検査を通す
+        run: |
+          python test3.py
+          python test_cards.py
+          python test_web.py
+
+      - name: できたものを確かめる
+        run: |
+          test -f web/index.html
+          test -f web/worker.js
+          test -f web/dmsrc.zip
+          test -f web/pyodide/pyodide.asm.wasm
+          du -sh web
+
+      - name: Pages の設定を読む
+        uses: actions/configure-pages@v5
+
+      - name: web/ を Pages に渡す
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 公開する
+        id: deployment
+        uses: actions/deploy-pages@v4
