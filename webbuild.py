@@ -164,6 +164,20 @@ onmessage = async (e) => {
       postMessage({ t: "goalcheck", msg: py.runPython("webrun.check_goal(__g)") });
       return;
     }
+    if (m.t === "parsegoal") {          // 文章で書いたゴールを読む
+      await boot();
+      py.globals.set("__t", m.text);
+      py.globals.set("__d", JSON.stringify(m.deck || []));
+      postMessage({ t: "goalparsed", seq: m.seq,
+                    result: JSON.parse(py.runPython("webrun.parse_goal_text(__t, __d)")) });
+      return;
+    }
+    if (m.t === "goaltotext") {         // いまのゴールを文章に戻す
+      await boot();
+      py.globals.set("__g", JSON.stringify(m.goal));
+      postMessage({ t: "goaltext", text: py.runPython("webrun.goal_to_text(__g)") });
+      return;
+    }
   } catch (err) {
     postMessage({ t: "error", msg: String(err && err.message || err) });
   }

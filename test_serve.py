@@ -152,6 +152,23 @@ def main():
         check("書き方のおかしいゴールは断る（保存前に確かめている）", st == 400)
         st, b = req(base + "/api/save-goals", {"goals": []}, "testtoken123")
         check("空のゴールは断る", st == 400)
+        # ---------------------------------------------------------------- 文章で書いたゴールを読む
+        st, body = req(base + "/api/parse-goal",
+                       {"text": "ユニバースが表に出る\nユニバースで特殊勝利する", "deck": []},
+                       key="testtoken123")
+        r = json.loads(body) if st == 200 else {}
+        check("文章からゴールを作る道がサーバーにもある", st == 200 and bool(r.get("goal")))
+        check("1行＝1部品になる", len((r.get("goal") or {}).get("parts", [])) == 2)
+        check("読み返しが返る", all(n.get("read") for n in r.get("notes", [])))
+        st2, b2 = req(base + "/api/goal-text", {"goal": r["goal"]}, key="testtoken123")
+        r2 = json.loads(b2) if st2 == 200 else {}
+        check("ゴールを文章に戻す道もある", st2 == 200 and bool(r2.get("text")))
+        st3, b3 = req(base + "/api/parse-goal", {"text": "そらをとぶピカチュウを出す", "deck": []},
+                      key="testtoken123")
+        r3 = json.loads(b3) if st3 == 200 else {}
+        check("読めない行は、読めなかったと返す（黙って捨てない）",
+              st3 == 200 and any((not n["ok"]) or n.get("miss") for n in r3.get("notes", [])))
+
         st, _b = req(base + "/api/nothing", key="testtoken123")
         check("知らない道は404", st == 404)
     finally:
@@ -164,6 +181,7 @@ def main():
             shutil.move(bak_goals, goals.MINE)
         elif os.path.exists(goals.MINE):
             os.remove(goals.MINE)
+
 
     bad = [n for n, c in OK if not c]
     print(f"\n{len(OK) - len(bad)}/{len(OK)} 通過" + ("" if not bad else "　失敗：" + "、".join(bad)))

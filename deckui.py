@@ -296,6 +296,19 @@ code { font-family: var(--f-num); font-size: .9em; }
 details { margin-top: 10px; } summary { cursor: pointer; font-size: .82rem; }
 .detail { font-size: .76rem; color: var(--dim); border-top: 1px solid var(--line); padding-top: 8px;
   margin-top: 8px; }
+/* ---- ゴール工房：文章で書く ---- */
+.writebox { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 3px;
+  padding: 10px 11px; margin-bottom: 12px; background: color-mix(in srgb, var(--accent) 4%, transparent); }
+.writebox textarea { min-height: 96px; font-family: var(--f-body); font-size: .88rem; line-height: 1.7; }
+.gread { margin-top: 8px; font-size: .8rem; line-height: 1.75; }
+.gread .ln { display: grid; grid-template-columns: 1.3em 1fr; gap: 4px; align-items: start;
+  padding: 2px 0; border-bottom: 1px dotted var(--line); }
+.gread .ok { color: var(--ok); } .gread .ng { color: var(--accent); }
+.gread .say { color: var(--fg); }
+.gread .warn { color: var(--warn); font-size: .95em; }
+.gread .dim { color: var(--dim); }
+#gfine > summary { margin: 4px 0 8px; color: var(--dim); }
+
 /* ---- ゴール工房 ---- */
 .goalsec { margin-top: 18px; }
 .part { border: 1px solid var(--line); border-radius: 3px; padding: 9px 10px; margin-bottom: 8px;
@@ -477,6 +490,22 @@ footer .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 0; }
         <div class="filters">
           <input type="text" id="gdecks" placeholder="当たるデッキ名（名前の一部。読点か半角カンマ区切り）" style="flex:1 1 100%">
         </div>
+        <div class="writebox">
+          <div class="eyebrow">文章で書く</div>
+          <p class="note" style="margin:2px 0 6px">
+            <b>1行に1つ、やりたいことをそのまま書く。</b>条件の種類は選ばなくてよい。
+            上から順に「ここまで来たら次」という筋になる。</p>
+          <textarea id="gtext" spellcheck="false" rows="5"
+            placeholder="モモキングダムXが出る&#10;一度でもユニバースを下に仕込む&#10;ユニバースが表に出る&#10;ユニバースで特殊勝利する"></textarea>
+          <div class="btnrow" style="margin-top:6px">
+            <button id="gtextgo">この文章でゴールを作る</button>
+            <button id="gtextback">いまのゴールを文章にする</button>
+          </div>
+          <div id="gread" class="gread"></div>
+        </div>
+
+        <details id="gfine">
+          <summary>細かく直す（条件を1つずつ選ぶ）</summary>
         <div id="parts"></div>
         <div class="btnrow">
           <button id="addpart">部品を足す</button>
@@ -490,6 +519,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 0; }
           一度満たしたらその後ずっと満たしたことになる。<br>
           「場に出た」を測りたいのに踏み倒しで一瞬しか立たないカードは、条件の種類を
           <b>出来事：この試合でこのカードが場に出た</b>にすると取りこぼさない。</p>
+        </details>
       </div>
 
       <div>
@@ -1038,6 +1068,83 @@ function drawJson() {
   $("gerr").textContent = errs.length ? errs.join("／") : "";
   $("gjson").textContent = JSON.stringify(goalJson(), null, 2);
 }
+/* ---------------- ゴールを文章で書く ----------------
+   読むのはPython（goaltext.py）。画面では読まない。
+   同じ文を入れれば必ず同じ条件が出るようにしたいので、読み方を2か所に書かない。
+   ウェブ版は裏方（worker）、serve.py 版はサーバーに頼む。
+   どちらも無い（deckui.html をそのまま開いた）ときは、その旨を出す。 */
+let gseq = 0, gtimer = null, gparsed = null;
+
+function goalTextAvailable() { return WEB || SV; }
+
+function askParse(text) {
+  const seq = ++gseq;
+  const keys = Object.keys(deck || {});     // 組んでいるデッキのカードを先に探すため
+  if (WEB) { getWorker().postMessage({ t: "parsegoal", text, deck: keys, seq }); return; }
+  if (SV) {
+    api("/api/parse-goal", { text, deck: keys }).then((r) => showRead(r, seq))
+      .catch((e) => { $("gread").innerHTML = `<span class="ng">読めませんでした：${esc(e.message)}</span>`; });
+  }
+}
+
+function showRead(r, seq) {
+  if (seq && seq !== gseq) return;            // 古い返事は捨てる（打っている途中の分）
+  gparsed = r && r.goal ? r.goal : null;
+  const notes = (r && r.notes) || [];
+  if (!notes.length) { $("gread").innerHTML = ""; return; }
+  $("gread").innerHTML = `<div class="eyebrow">こう読みました</div>` + notes.map((n) => {
+    let body = n.ok ? `<span class="say">${esc(n.read)}</span>`
+                    : `<span class="ng">読み取れませんでした</span>`;
+    (n.miss || []).forEach((m) => {
+      body += m.cands && m.cands.length
+        ? `<div class="warn">「${esc(m.word)}」はどれか決められません：${esc(m.cands.slice(0, 4).join("・"))}</div>`
+        : `<div class="warn">「${esc(m.word)}」に当たるカードが見つかりません</div>`;
+    });
+    if (n.ok && n.hint) body += `<div class="dim">${esc(n.hint)}</div>`;
+    return `<div class="ln"><span class="${n.ok ? "ok" : "ng"}">${n.ok ? "○" : "×"}</span>
+      <div><div class="dim">${esc(n.line)}</div>${body}</div></div>`;
+  }).join("");
+}
+
+$("gtext").addEventListener("input", () => {
+  const t = $("gtext").value;
+  if (!t.trim()) { $("gread").innerHTML = ""; gparsed = null; return; }
+  if (!goalTextAvailable()) {
+    $("gread").innerHTML = `<span class="dim">この画面だけでは文章を読めません。
+      ウェブ版か <code>python serve.py</code> で開くと、打つそばから読み返しが出ます。
+      いまは <code>python goaltext.py "${esc(t.split("\n")[0])}"</code> で確かめられます。</span>`;
+    return;
+  }
+  clearTimeout(gtimer);
+  gtimer = setTimeout(() => askParse(t), 400);
+});
+
+$("gtextgo").addEventListener("click", () => {
+  if (!gparsed || !(gparsed.parts || []).length) {
+    $("gread").innerHTML = `<span class="ng">まだ読めた行がありません</span>` + $("gread").innerHTML;
+    return;
+  }
+  const keepName = $("gname").value.trim();
+  const keepDecks = $("gdecks").value.trim();
+  goal = goalFrom(gparsed);
+  goal.auto = false;                 // 自分で書いたゴールは、デッキを変えても上書きしない
+  if (keepName) goal.name = keepName;
+  if (keepDecks) goal.decks = keepDecks.split(/[、,]/).map((x) => x.trim()).filter(Boolean);
+  drawGoal();
+  $("gfine").open = true;
+});
+
+$("gtextback").addEventListener("click", () => {
+  const g = goalJson().goals[0];
+  if (WEB) { getWorker().postMessage({ t: "goaltotext", goal: g }); return; }
+  if (SV) {
+    api("/api/goal-text", { goal: g }).then((r) => { $("gtext").value = r.text || ""; askParse($("gtext").value); })
+      .catch(() => {});
+    return;
+  }
+  $("gread").innerHTML = `<span class="dim">ウェブ版か serve.py で開くと使えます</span>`;
+});
+
 $("addpart").addEventListener("click", () => {
   goal.auto = false;
   goal.parts.push({ name: `部品${goal.parts.length + 1}`, conds: [{ t: "win", v: true, n: 1 }] });
@@ -1135,6 +1242,11 @@ function getWorker() {
     } else if (m.t === "done") {
       $("run").disabled = false; $("progwrap").hidden = true; $("runmsg").textContent = "";
       showResult(m.result);
+    } else if (m.t === "goalparsed") {
+      showRead(m.result, m.seq);
+    } else if (m.t === "goaltext") {
+      $("gtext").value = m.text || "";
+      if (m.text) askParse(m.text);
     } else if (m.t === "error") {
       $("run").disabled = false; $("progwrap").hidden = true;
       $("runmsg").innerHTML = `<span style="color:var(--accent)">できませんでした：${esc(m.msg)}</span>`;

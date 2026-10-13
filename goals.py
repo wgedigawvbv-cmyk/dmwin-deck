@@ -455,11 +455,42 @@ def main():
     ap.add_argument("--at", help="--check と一緒に使う。ゴール地点にする部品の名前")
     ap.add_argument("--file", help="ゴール表のJSON（既定 goals.json ＋ mygoals.json）")
     ap.add_argument("--validate", action="store_true", help="全部のゴールの条件が組み立てられるか確かめる")
+    ap.add_argument("--from-text", metavar="文章",
+                    help="文章からゴールを作る（例： --from-text \"ユニバースが表に出る / 特殊勝利する\"）")
+    ap.add_argument("--text-file", help="文章の書かれたファイルからゴールを作る")
+    ap.add_argument("--to-text", metavar="ゴール名", help="あるゴールを文章にして見せる")
     ap.add_argument("--init", action="store_true", help="自分のゴール表 mygoals.json のひな形を作る")
     a = ap.parse_args()
 
     if a.init:
         _init_mine()
+        return
+    if a.from_text or a.text_file:
+        import goaltext
+        txt = open(a.text_file, encoding="utf-8").read() if a.text_file else a.from_text
+        goal, notes = goaltext.parse(txt)
+        print("【こう読みました】")
+        print(goaltext.report(notes))
+        bad = [n for n in notes if not n["ok"]]
+        print()
+        if not goal["parts"]:
+            raise SystemExit("読める行がありませんでした。python goals.py --conds で書ける条件が見られます")
+        for _nm, w in parts_of(goal):
+            _one(w)                                   # 実際に組み立てられるか確かめる
+        print("【mygoals.json に貼り付けるもの】")
+        print(json.dumps({"goals": [goal]}, ensure_ascii=False, indent=1))
+        if bad:
+            print(f"\n（{len(bad)}行は読めませんでした。上の×の行を書き直してください）")
+        return
+    if a.to_text:
+        import goaltext
+        tab = load(a.file)
+        g = next((x for x in tab if x.get("name") == a.to_text), None) or \
+            next((x for x in tab if a.to_text in x.get("name", "")), None)
+        if g is None:
+            raise SystemExit(f"『{a.to_text}』というゴールがありません（python goals.py --list）")
+        print(f"【{g['name']}】")
+        print(goaltext.explain(g))
         return
     if a.conds:
         print(f"書ける条件 {len(COND)}種類（1つの辞書に1つ。まとめ役は all／any／not）\n")

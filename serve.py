@@ -231,6 +231,15 @@ class H(BaseHTTPRequestHandler):
                 p = save_goals(b)
                 print(f"  ・ゴールを保存しました：{p}")
                 return s._ok({"path": os.path.basename(p)})
+            if u.path == "/api/parse-goal":
+                # 文章で書いたゴールを読む（画面の「文章で書く」欄）。
+                # 読み方は goaltext.py の1か所だけ。画面側では読まない。
+                import goaltext
+                g, notes = goaltext.parse(str(b.get("text", ""))[:4000], b.get("deck") or None)
+                return s._ok({"goal": g, "notes": notes})
+            if u.path == "/api/goal-text":
+                import goaltext
+                return s._ok({"text": goaltext.explain(b.get("goal") or {})})
         except SystemExit as e:
             return s._err(400, str(e))
         except Exception as e:                         # noqa: BLE001

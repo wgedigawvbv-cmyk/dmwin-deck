@@ -38,6 +38,29 @@ def go(req_json, progress=None):
     return json.dumps(runner.run(o, p), ensure_ascii=False)
 
 
+def parse_goal_text(text, deck_json="[]"):
+    """文章で書いたゴールを読む。画面の「文章で書く」欄が1文字ごとに呼ぶ。
+
+    返すのは {"goal": ゴールの辞書, "notes": 読み取りの記録}。
+    読めなかった行も notes に入れて返す（黙って捨てない）。"""
+    import goaltext
+    try:
+        deck = json.loads(deck_json) if deck_json else []
+    except Exception:                               # noqa: BLE001
+        deck = []
+    goal, notes = goaltext.parse(text, deck or None)
+    return json.dumps({"goal": goal, "notes": notes}, ensure_ascii=False)
+
+
+def goal_to_text(goal_json):
+    """ゴールの辞書を文章に戻す（画面で「いまのゴールを文章にする」を押した時）"""
+    import goaltext
+    try:
+        return goaltext.explain(json.loads(goal_json))
+    except Exception as e:                          # noqa: BLE001
+        return ""
+
+
 def check_goal(goal_json):
     """ゴールの書き方だけを確かめる（回さない）。おかしければ理由を返す"""
     import goals
